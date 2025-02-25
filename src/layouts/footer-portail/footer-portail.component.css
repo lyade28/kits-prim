@@ -1,0 +1,82 @@
+.footer {
+    background-color: black;
+    padding: 24px;
+}
+.logo p {
+  color: white;
+  font-size: 14px;
+  width: 70%;
+}
+.newsletter strong {
+  color: white;
+}
+.reseaux strong {
+  color: white;
+}
+
+.btn {
+  padding: 8px;
+  color: white;
+  border: none;
+  outline: 0 none;
+  font-size: 12px;
+}
+
+.search_wrap .search_box{
+position: relative;
+width: 400px;
+height: 50px;
+padding-bottom: 0px;
+padding-right: 0px;
+}
+
+.search_wrap .search_box .input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 77%;
+  height: 80%;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 12px;
+  }
+
+  .search_wrap .search_box .btn{
+    position: absolute;
+    width: 50px;
+    height: 90%;
+    background: #FE9A0A;
+    z-index: 1;
+    cursor: pointer;
+    }
+
+
+.search_wrap.search_wrap_6 .search_box .input{
+border-radius: 50px;
+}
+
+
+.search_wrap.search_wrap_6 .search_box .btn{
+width: 80px;
+height: 30px;
+top: 5px;
+right: 100px;
+border-radius: 3px;
+color: #fff;
+background-color: #FE9A0A;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.search_wrap.search_wrap_6 .search_box .btn{
+border-radius: 25px;
+}
+
+.fab i {
+    font-size: 18px;
+    background-color: white;
+    padding: 8px 10px 8px 10px;
+    border-radius: 4px;
+    color: #FE9A0A;
+}

@@ -1,0 +1,10 @@
+<div id="wrapper">
+    <app-sidebar></app-sidebar>
+
+    <section id="content-wrapper">
+        <a (click)="activeToggle()" id="sidebar-toggle">
+            <i class="material-icons">menu_open</i>
+        </a>
+        <router-outlet></router-outlet>
+    </section>
+</div>

@@ -1,0 +1,94 @@
+<aside id="sidebar-wrapper">
+    <div>
+        <div class="sidebar-brand">
+            <div class="sidebar-brand-logo d-flex flex-column justify-content-center align-items-center ">
+                <a href="/accueil"><img src="assets/images/emedia.png" alt="Sénégal" title="Sénégal" width="220"></a>
+
+            </div>
+        </div>
+
+        <ul class="sidebar-nav">
+            @for (menu of menuItems; track menu.menId) {
+            <li class="nav-item">
+
+                <ng-container *ngIf="!menu.childrens || menu.childrens.length === 0">
+                    <a class="nav-link" [routerLink]="[menu.menPath]" routerLinkActive="active">
+                        <!-- <i-lucide [name]="menu.menIconType"></i-lucide> -->
+                        <i class="material-icons">{{menu.menIconType}}</i>
+
+                        <span>{{ menu.menTitle }}</span>
+                    </a>
+                </ng-container>
+
+                <ng-container *ngIf="menu.childrens && menu.childrens.length > 0">
+                    <a class="nav-link nav-link-sub" data-bs-toggle="collapse" [attr.href]="'#subMenu-' + menu.menPath"
+                        role="button" aria-expanded="false" [ngClass]="{ active: isSubMenuActive(menu) }"
+                        [attr.aria-controls]="'subMenu-' + menu.menPath" (click)="toggleSubMenu(menu)">
+                        <div class="icon_text">
+                            <i class="material-icons">{{menu.menIconType}}</i>
+                            <span>{{ menu.menTitle }}</span>
+                        </div>
+
+                        <!-- <i-lucide name="{{ isSubMenuActive(menu) || menuState[menu.menPath] ? 'chevron_up' :
+                    'chevron_right'
+                    }}" size="20"></i-lucide> -->
+                    </a>
+                    <ul class="navs collapse sub-menu" [id]="'subMenu-' + menu.menPath"
+                        [ngClass]="{ show: isSubMenuActive(menu) || menuState[menu.menPath] }">
+                        <li class="nav-item" *ngFor="let subMenu of menu.childrens">
+                            <a class="nav-link" [routerLink]="subMenu.menPath" routerLinkActive="active"
+                                (click)="closeMenuIfNotSubMenu($event, menu)">
+                                <span>{{ subMenu.menTitle }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </ng-container>
+            </li>
+            }
+        </ul>
+    </div>
+
+    <div class="sidebar-footer">
+        <div class="user-wrapper dropdown">
+            <div class="d-flex align-items-center my-3">
+                <div class="user-avatar me-2">
+                    <img src="assets/corporate-user-icon.webp">
+                </div>
+                <span class="user-content">
+                    <span>Gerald LEGRAND</span>
+                    <span>Super Admin</span>
+                </span>
+            </div>
+
+            <div class="dropdown">
+                <button class="fab-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="material-icons">more_vert</i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="javascript:(0)">
+                            <!-- <i-lucide name="user" size="20"></i-lucide> -->
+
+                            <span class="ms-2">Mon compte</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="javascript:(0)" data-bs-toggle="modal"
+                            (click)="logOut()" data-bs-target="#logoutConfirm">
+                            <span class="ms-2">Déconnexion</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</aside>
+
+<div class="sidebar-header d-flex justify-content-between align-items-center p-2">
+    <!-- breadcrum ici  -->
+    <div class="user-avatar me-2">
+        <img src="assets/images/emedia.png" alt="Mon profil">
+    </div>
+
+</div>

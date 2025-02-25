@@ -1,0 +1,95 @@
+/* Order */
+@layer reset, primeng;
+
+/* Reset CSS */
+@layer reset {
+
+
+    button,
+    input,
+    select,
+    textarea,
+    .p-inputtext,
+    .p-calendar .p-inputtext,
+    .p-dropdown,
+    .p-dropdown .p-dropdown-label,
+    .p-multiselect,
+    .p-multiselect .p-multiselect-label,
+    .p-inputnumber,
+    .p-inputnumber .p-inputtext,
+    .p-autocomplete,
+    .p-autocomplete .p-inputtext,
+    .p-password,
+    .p-password .p-inputtext,
+    .p-chips,
+    .p-chips .p-inputtext {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 8px 12px;
+        font-size: 12px;
+        width: 100% !important;
+        height: 40px;
+        /* Hauteur uniforme */
+        color: #3b3a3a;
+        display: flex;
+        align-items: center;
+    }
+
+
+
+
+    .p-calendar,
+    .p-dropdown,
+    .p-multiselect,
+    .p-inputnumber,
+    .p-autocomplete,
+    .p-password,
+    .p-chips {
+        width: 100% !important;
+    }
+
+    .p-confirm-dialog {
+        background-color: white !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .p-button-icon-only.p-button-rounded {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    /* 🌟 Style du menu PrimeNG */
+    .p-menu {}
+
+    /* 🌟 Style des éléments du menu */
+    .p-menu .p-menuitem-link {
+        background-color: red !important;
+        font-weight: 500;
+        padding: 10px 15px !important;
+        border-radius: 5px !important;
+        transition: all 0.3s ease !important;
+        display: flex;
+        align-items: center;
+    }
+
+    /* 🌟 Effet au survol */
+    .p-menu .menu-item-content:hover {
+        background-color: #F39222 !important;
+        color: white !important;
+    }
+
+    /* 🌟 Élément actif */
+    .p-menu .p-menu-item-content.router-link-active {
+        background-color: #F39222 !important;
+        color: white !important;
+        font-weight: bold !important;
+    }
+
+    /* 🌟 Style des icônes */
+    .p-menu .p-menuitem-link span {
+        margin-right: 8px;
+    }
+
+
+}
