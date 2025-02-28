@@ -1,0 +1,9 @@
+:host ::ng-deep .p-card {
+    background-color: var(--p-custom-cardcolor);
+    border-radius: 10px;
+}
+
+:host ::ng-deep .p-button {
+    background-color: var(--p-custom-cardcolor);
+    border-radius: 10px;
+}

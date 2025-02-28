@@ -1,10 +1,7 @@
-import { ApplicationConfig } from '@angular/core';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { providePrimeNG } from 'primeng/config';
-import Material from "@primeng/themes/material";
 import { definePreset } from "@primeng/themes";
+import Lara from "@primeng/themes/lara";
 
-const MyPreset = definePreset(Material, {
+export const MyPreset = definePreset(Lara, {
     primitive: {
         borderRadius: {
             none: "0",
@@ -314,17 +311,17 @@ const MyPreset = definePreset(Material, {
         iconSize: "1rem",
         anchorGutter: "2px",
         primary: {
-            50: "#fefaf4",
-            100: "#fce5ca",
-            200: "#fad0a0",
-            300: "#f8bb75",
-            400: "#f5a74b",
-            500: "#f39221",
-            600: "#cf7c1c",
-            700: "#aa6617",
-            800: "#865012",
-            900: "#613a0d",
-            950: "#3d2508"
+            50: "#fff8f3",
+            100: "#feddc8",
+            200: "#fcc39c",
+            300: "#fba870",
+            400: "#fa8e44",
+            500: "#f97318",
+            600: "#d46214",
+            700: "#ae5111",
+            800: "#893f0d",
+            900: "#642e0a",
+            950: "#3e1d06"
         },
         formField: {
             paddingX: "0.75rem",
@@ -411,17 +408,17 @@ const MyPreset = definePreset(Material, {
             light: {
                 surface: {
                     0: "#ffffff",
-                    50: "#f2f2f2",
-                    100: "#c2c2c2",
-                    200: "#919191",
-                    300: "#616161",
-                    400: "#303030",
-                    500: "#000000",
-                    600: "#000000",
-                    700: "#000000",
-                    800: "#000000",
-                    900: "#000000",
-                    950: "#000000"
+                    50: "#f8fafc",
+                    100: "#f1f5f9",
+                    200: "#e2e8f0",
+                    300: "#cbd5e1",
+                    400: "#94a3b8",
+                    500: "#64748b",
+                    600: "#475569",
+                    700: "#334155",
+                    800: "#1e293b",
+                    900: "#0f172a",
+                    950: "#020617"
                 },
                 primary: {
                     color: "{primary.500}",
@@ -434,6 +431,9 @@ const MyPreset = definePreset(Material, {
                     focusBackground: "{primary.100}",
                     color: "{primary.700}",
                     focusColor: "{primary.800}"
+                },
+                custom: {
+                    cardcolor: "rgba(208, 24, 24, 0.4)",
                 },
                 mask: {
                     background: "rgba(0,0,0,0.4)",
@@ -517,7 +517,7 @@ const MyPreset = definePreset(Material, {
                         focusColor: "{text.hover.color}",
                         activeColor: "{text.hover.color}",
                         icon: {
-                            color: "{surface.300}",
+                            color: "{surface.400}",
                             focusColor: "{surface.500}",
                             activeColor: "{surface.500}"
                         }
@@ -536,17 +536,17 @@ const MyPreset = definePreset(Material, {
             dark: {
                 surface: {
                     0: "#ffffff",
-                    50: "#f2f2f2",
-                    100: "#c2c2c2",
-                    200: "#919191",
-                    300: "#616161",
-                    400: "#303030",
-                    500: "#000000",
-                    600: "#000000",
-                    700: "#000000",
-                    800: "#000000",
-                    900: "#000000",
-                    950: "#000000"
+                    50: "#fafafa",
+                    100: "#f4f4f5",
+                    200: "#e4e4e7",
+                    300: "#d4d4d8",
+                    400: "#a1a1aa",
+                    500: "#71717a",
+                    600: "#52525b",
+                    700: "#3f3f46",
+                    800: "#27272a",
+                    900: "#18181b",
+                    950: "#09090b"
                 },
                 primary: {
                     color: "{primary.400}",
@@ -659,19 +659,5 @@ const MyPreset = definePreset(Material, {
                 }
             }
         }
-    },
-    extend: {
-        col: "100"
     }
 });
-
-export const appConfig: ApplicationConfig = {
-    providers: [
-        provideAnimationsAsync(),
-        providePrimeNG({
-            theme: {
-                preset: MyPreset,
-            }
-        })
-    ]
-};

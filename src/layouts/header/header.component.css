@@ -1,0 +1,4 @@
+:host ::ng-deep .p-button .p-menubar-root-list {
+    background-color: var(--p-custom-cardcolor);
+    border-radius: 10px;
+}

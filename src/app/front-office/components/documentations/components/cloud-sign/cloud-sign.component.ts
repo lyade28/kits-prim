@@ -14,7 +14,12 @@ import { PanelMenu } from 'primeng/panelmenu';
 })
 export class CloudSignComponent implements OnInit {
   items: MenuItem[] = [];
-
+  item = [
+    {
+      menuItem: 'Accueil',
+      dispayItem: 'jlkfklsdf'
+    }
+  ]
   constructor(private router: Router) { }
 
   ngOnInit() {

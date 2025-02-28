@@ -1,4 +1,4 @@
-<p-menubar [model]="items">
+<p-menubar [model]="items" [dt]="menubarStyle">
     <ng-template #start>
         <img src="" alt="">
     </ng-template>
@@ -14,7 +14,7 @@
     </ng-template>
     <ng-template #end>
         <div class="d-flex items-center gap-2">
-            <p-button icon="pi pi-iconName" label="Se connecter"></p-button>
+            <p-button label="Se connecter" severity="secondary" />
         </div>
     </ng-template>
 </p-menubar>
