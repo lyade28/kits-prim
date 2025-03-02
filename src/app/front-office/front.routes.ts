@@ -4,7 +4,9 @@ import { MainPortailComponent } from "../../layouts/main-portail/main-portail.co
 import { CloudSignComponent } from "./components/documentations/components/cloud-sign/cloud-sign.component";
 import { EmSignComponent } from "./components/documentations/components/em-sign/em-sign.component";
 import { ContactComponent } from "./components/Contact/contact/contact.component";
-import { PhoneComponent } from "./components/documentations/components/cloud-sign/components/phone/phone.component";
+import {
+  ContentDocComponent
+} from './components/documentations/components/cloud-sign/components/content-doc/content-doc.component';
 
 
 export const PortailRoutes: Routes = [
@@ -20,11 +22,11 @@ export const PortailRoutes: Routes = [
                 path: "cloud-sign",
                 component: CloudSignComponent,
                 children: [
-                    {
-                        path: "Phone",
-                        component: PhoneComponent,
-                    },
-                    { path: "", redirectTo: "cloud-sign", pathMatch: "full" },
+
+                      { path: ':rubrique', component: ContentDocComponent } // Route dynamique pour le contenu
+
+                    ,
+                  { path: '**', redirectTo: 'cloud-sign/accueil' } // Redirection par défaut
                 ],
             },
             {

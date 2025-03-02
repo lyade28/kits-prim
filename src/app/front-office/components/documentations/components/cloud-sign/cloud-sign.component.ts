@@ -25,38 +25,19 @@ export class CloudSignComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {
+        label: 'Accueil',
+        icon: 'pi pi-home',
+        route: 'accueil'
+      },
+      {
         label: 'Files',
         icon: 'pi pi-file',
-        items: [
-          {
-            label: 'Documents',
-            icon: 'pi pi-file',
-
-          },
-          {
-            label: 'Images',
-            icon: 'pi pi-image',
-
-          }
-        ]
+        route: 'files'
       },
       {
         label: 'Cloud',
         icon: 'pi pi-cloud',
-        items: [
-          {
-            label: 'Upload',
-            icon: 'pi pi-cloud-upload'
-          },
-          {
-            label: 'Download',
-            icon: 'pi pi-cloud-download'
-          },
-          {
-            label: 'Sync',
-            icon: 'pi pi-refresh'
-          }
-        ]
+        route: 'cloud'
       },
       {
         label: 'Devices',
@@ -65,22 +46,21 @@ export class CloudSignComponent implements OnInit {
           {
             label: 'Phone',
             icon: 'pi pi-mobile',
-            command: () => {
-              this.router.navigate(['/cloud-sign/Phone']);
-            }
+            route: 'phone'
           },
           {
             label: 'Desktop',
-            icon: 'pi pi-desktop'
+            icon: 'pi pi-desktop',
+            route: 'desktop'
           },
           {
             label: 'Tablet',
-            icon: 'pi pi-tablet'
+            icon: 'pi pi-tablet',
+            route: 'tablet'
           }
         ]
       }
     ];
   }
-
 
 }
